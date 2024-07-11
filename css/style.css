@@ -193,6 +193,7 @@ body {
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 100;
+  line-height: 1.6;
 }
 
 @media (max-width: 1366px) {
@@ -237,6 +238,29 @@ body {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-fit: center;
+  }
+
+  .about .row .isiabout {
+    padding: 0;
+  }
+
+  .about .row .isiabout h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .isiabout p {
+    font-size: 1.6rem;
   }
 }
 
