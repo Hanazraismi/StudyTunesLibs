@@ -13,6 +13,7 @@
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -96,120 +97,54 @@ body {
 
 /* section */
 
-.spotify-playlists {
-  padding: 60px 300px;
+.studytunes {
+  padding: 40px;
+  margin-top: 5rem;
 }
 
-.spotify-playlists h2 {
-  padding: 20px;
-  color: #ffffff;
-  font-size: 22px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+.studytunes .h1 {
+  align-items: center;
 }
 
-.spotify-playlists .list {
+.music {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  flex-flow: column;
+}
+
+.music .box {
+  height: 16rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 1rem #1b1b1b;
   overflow: hidden;
+  margin: 2rem;
 }
 
-.spotify-playlists .list .item {
-  min-width: 140px;
-  width: 160px;
-  padding: 15px;
-  background-color: #181818;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all ease 0.4s;
+.music .box .image {
+  height: 100%;
+  width: 25%;
 }
 
-.spotify-playlists .list .item:hover {
-  background-color: #252525;
-}
-
-.spotify-playlists .list .item img {
+.music .box .image img {
+  height: 100%;
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  object-fit: cover;
 }
 
-.spotify-playlists .list .item .play {
-  position: relative;
+.music .box .music {
+  width: 75%;
 }
 
-.spotify-playlists .list .item .play .fa {
-  position: absolute;
-  right: 10px;
-  top: -60px;
-  padding: 18px;
-  background-color: #1db954;
-  border-radius: 100%;
-  opacity: 0;
-  transition: all ease 0.4s;
+.music .box .music audio {
+  width: 100%;
+  outline: none;
 }
 
-.spotify-playlists .list .item:hover .play .fa {
-  opacity: 1;
-  transform: translateY(-20px);
-}
-
-.spotify-playlists .list .item h4 {
-  color: #ffffff;
-  font-size: 14px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.spotify-playlists .list .item p {
-  color: #989898;
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-.spotify-playlists hr {
-  margin: 70px 0px 0px;
-  border-color: #636363;
-}
-
-.preview {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to right, #ae2896, #509bf5);
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.preview h6 {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.preview p {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.preview button {
-  background-color: #ffffff;
-  color: #000000;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 14px 30px;
-  border: 0px;
-  border-radius: 40px;
-  cursor: pointer;
+.music .box .music audio::-webkit-media-controls-eclosure {
+  background: none;
 }
 
 footer {
@@ -295,6 +230,22 @@ footer .credit a {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .music .box {
+    height: 27rem;
+    width: 90%;
+    flex-flow: column;
+  }
+
+  .music .box .image {
+    height: 80%;
+    width: 100%;
+  }
+
+  .music .box .music {
+    height: 20%;
+    width: 100%;
   }
 }
 
