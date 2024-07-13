@@ -1,6 +1,6 @@
 :root {
   --primary: #f1b77a;
-  --bg: #ffe6cc;
+  --bg: #f1b77a;
 }
 
 * {
@@ -99,7 +99,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/back.jpg");
+  background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -113,11 +113,6 @@ body {
   width: 100%;
   height: 30%;
   bottom: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(1, 1, 3, 1) 8%,
-    rgba(255, 255, 255, 0) 40%
-  );
 }
 
 .hero .Tunes {
@@ -133,7 +128,7 @@ body {
 }
 
 .hero .Tunes h1 span {
-  color: #510896;
+  color: #1b1b1b;
 }
 
 .hero .Tunes p {
@@ -154,57 +149,6 @@ body {
   background-color: var(--primary);
   border-radius: 0.4rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-}
-
-.about,
-.trend {
-  padding: 8rem 7% 1.4rem;
-}
-
-.about h2,
-.trend h2 {
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 3rem;
-}
-
-.about h2 span,
-.trend h2 span {
-  color: #510896;
-}
-
-.about .row,
-.trend .music {
-  display: flex;
-}
-
-.about .row .about-img,
-.trend .music .music-img {
-  flex: 1 1 45rem;
-}
-
-.about .row .about-img img,
-.trend .music .music-img img {
-  width: 100%;
-}
-
-.about .row .isiabout,
-.trend .music .isitrend {
-  flex: 1 1 35rem;
-  padding: 0 1rem;
-}
-
-.about .row .isiabout h3 .trend .music .isitrend h3 {
-  font: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.about .row .isiabout p,
-.trend .music .isitrend p {
-  margin-bottom: 0.8rem;
-  font-size: 1.4rem;
-  font-weight: 100;
-  line-height: 1.6;
 }
 
 footer {
@@ -290,34 +234,6 @@ footer .credit a {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
-  }
-
-  .about .row,
-  .trend .music {
-    flex-wrap: wrap;
-  }
-
-  .about .row .about-img img,
-  .trend .music .music-img img {
-    height: 24rem;
-    object-fit: cover;
-    object-fit: center;
-  }
-
-  .about .row .isiabout,
-  .trend .music .isitrend {
-    padding: 0;
-  }
-
-  .about .row .isiabout h3,
-  .trend .music .isitrend h3 {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-
-  .about .row .isiabout p,
-  .trend .music .isitrend p {
-    font-size: 1.6rem;
   }
 }
 
