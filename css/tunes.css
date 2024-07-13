@@ -102,8 +102,18 @@ body {
   margin-top: 5rem;
 }
 
-.studytunes .h1 {
-  align-items: center;
+.studytunes h1 {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.studytunes h1 span {
+  color: #1b1b1b;
+}
+
+.box h2 {
+  text-align: center;
+  color: #ffffff;
 }
 
 .music {
