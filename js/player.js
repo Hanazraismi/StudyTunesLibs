@@ -1,174 +1,185 @@
-let now_playing = document.querySelector(".now-playing");
-let track_art = document.querySelector(".track-art");
-let track_name = document.querySelector(".track-name");
-let track_artist = document.querySelector(".track-artist");
+const musicContainer = document.getElementById("music-container");
+const playBtn = document.getElementById("play");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
-let playpause_btn = document.querySelector(".playpause-track");
-let next_btn = document.querySelector(".next-track");
-let prev_btn = document.querySelector(".prev-track");
+const audio = document.getElementById("audio");
+const progress = document.getElementById("progress");
+const progressContainer = document.getElementById("progress-container");
+const title = document.getElementById("title");
+const cover = document.getElementById("cover");
+const currTime = document.querySelector("#currTime");
+const durTime = document.querySelector("#durTime");
 
-let seek_slider = document.querySelector(".seek_slider");
-let volume_slider = document.querySelector(".volume_slider");
-let curr_time = document.querySelector(".current-time");
-let total_duration = document.querySelector(".total-duration");
-let wave = document.getElementById("wave");
-let randomIcon = document.querySelector(".fa-random");
-let curr_track = document.createElement("audio");
+// Song titles
+const songs = ["hey", "summer", "ukulele"];
 
-let track_index = 0;
-let isPlaying = false;
-let isRandom = false;
-let updateTimer;
+// Keep track of song
+let songIndex = 2;
 
-const music_list = [
-  {
-    img: "../assets/images/OrkhanZeynalli.jpg",
-    name: "Iller Sonra",
-    artist: "Orkhan Zeynalli",
-    music: "../assets/music/İller Sonra.mp3",
-  },
-  {
-    img: "../assets/images/ceza.jpg",
-    name: "Neyim Var Ki",
-    artist: "CEZA",
-    music: "../assets/music/Neyim Var Ki.mp3",
-  },
-  {
-    img: "../assets/images/Gazapizm.jpg",
-    name: "Unutulacak Dunler",
-    artist: "Gazapizm",
-    music: "../assets/music/Unutulacak Dunler.mp3",
-  },
-  {
-    img: "../assets/images/AID.jpg",
-    name: "Boyuk Umidler",
-    artist: "Orkhan Zeynalli",
-    music: "../assets/music/Boyuk Umidler.mp3",
-  },
-];
+// Initially load song details into DOM
+loadSong(songs[songIndex]);
 
-loadTrack(track_index);
-
-function loadTrack(track_index) {
-  clearInterval(updateTimer);
-  reset();
-
-  curr_track.src = music_list[track_index].music;
-  curr_track.load();
-
-  track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
-  track_name.textContent = music_list[track_index].name;
-  track_artist.textContent = music_list[track_index].artist;
-
-  now_playing.textContent =
-    "Playing music" + (track_index + 1) + " of " + music_list.length;
-  updateTimer = setInterval(setUpdate, 1000);
-  curr_track.addEventListener("ended", nextTrack);
+// Update song details
+function loadSong(song) {
+  title.innerText = song;
+  audio.src = `../assets/music/${song}.mp3`;
+  cover.src = `../assets/images/${song}.jpg`;
 }
 
-function reset() {
-  curr_time.textContent = "00:00";
-  total_duration.textContent = "00:00";
-  seek_slider.value = 0;
-}
-function randomTrack() {
-  isRandom ? pauseRandom() : playRandom();
+// Play song
+function playSong() {
+  musicContainer.classList.add("play");
+  playBtn.querySelector("i.fas").classList.remove("fa-play");
+  playBtn.querySelector("i.fas").classList.add("fa-pause");
+
+  audio.play();
 }
 
-function playRandom() {
-  isRandom = true;
-  randomIcon.classList.add("randomActive");
-}
-function pauseRandom() {
-  isRandom = false;
-  randomIcon.classList.remove("randomActive");
-}
-function repeatTrack() {
-  let current_index = track_index;
-  loadTrack(current_index);
-  playTrack();
-}
-function playpauseTrack() {
-  isPlaying ? pauseTrack() : playTrack();
+// Pause song
+function pauseSong() {
+  musicContainer.classList.remove("play");
+  playBtn.querySelector("i.fas").classList.add("fa-play");
+  playBtn.querySelector("i.fas").classList.remove("fa-pause");
+
+  audio.pause();
 }
 
-function playTrack() {
-  curr_track.play();
-  isPlaying = true;
-  track_art.classList.add("rotate");
-  wave.classList.add("loader");
-  playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
-}
-function pauseTrack() {
-  curr_track.pause();
-  isPlaying = false;
-  track_art.classList.remove("rotate");
-  wave.classList.remove("loader");
-  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+// Previous song
+function prevSong() {
+  songIndex--;
+
+  if (songIndex < 0) {
+    songIndex = songs.length - 1;
+  }
+
+  loadSong(songs[songIndex]);
+
+  playSong();
 }
 
-function nextTrack() {
-  if (track_index < music_list.length - 1 && isRandom === false) {
-    track_index += 1;
-  } else if (track_index < music_list.length - 1 && isRandom === true) {
-    let random_index = Number.parseInt(Math.random() * music_list.length);
-    track_index = random_index;
+// Next song
+function nextSong() {
+  songIndex++;
+
+  if (songIndex > songs.length - 1) {
+    songIndex = 0;
+  }
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+}
+
+// Update progress bar
+function updateProgress(e) {
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+}
+
+// Set progress bar
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+
+//get duration & currentTime for Time of song
+function DurTime(e) {
+  const { duration, currentTime } = e.srcElement;
+  var sec;
+  var sec_d;
+
+  // define minutes currentTime
+  let min = currentTime == null ? 0 : Math.floor(currentTime / 60);
+  min = min < 10 ? "0" + min : min;
+
+  // define seconds currentTime
+  function get_sec(x) {
+    if (Math.floor(x) >= 60) {
+      for (var i = 1; i <= 60; i++) {
+        if (Math.floor(x) >= 60 * i && Math.floor(x) < 60 * (i + 1)) {
+          sec = Math.floor(x) - 60 * i;
+          sec = sec < 10 ? "0" + sec : sec;
+        }
+      }
+    } else {
+      sec = Math.floor(x);
+      sec = sec < 10 ? "0" + sec : sec;
+    }
+  }
+
+  get_sec(currentTime, sec);
+
+  // change currentTime DOM
+  currTime.innerHTML = min + ":" + sec;
+
+  // define minutes duration
+  let min_d = isNaN(duration) === true ? "0" : Math.floor(duration / 60);
+  min_d = min_d < 10 ? "0" + min_d : min_d;
+
+  function get_sec_d(x) {
+    if (Math.floor(x) >= 60) {
+      for (var i = 1; i <= 60; i++) {
+        if (Math.floor(x) >= 60 * i && Math.floor(x) < 60 * (i + 1)) {
+          sec_d = Math.floor(x) - 60 * i;
+          sec_d = sec_d < 10 ? "0" + sec_d : sec_d;
+        }
+      }
+    } else {
+      sec_d = isNaN(duration) === true ? "0" : Math.floor(x);
+      sec_d = sec_d < 10 ? "0" + sec_d : sec_d;
+    }
+  }
+
+  // define seconds duration
+
+  get_sec_d(duration);
+
+  // change duration DOM
+  durTime.innerHTML = min_d + ":" + sec_d;
+}
+
+// Event listeners
+playBtn.addEventListener("click", () => {
+  const isPlaying = musicContainer.classList.contains("play");
+
+  if (isPlaying) {
+    pauseSong();
   } else {
-    track_index = 0;
+    playSong();
   }
-  loadTrack(track_index);
-  playTrack();
-}
+});
 
-function prevTrack() {
-  if (track_index > 0) {
-    track_index -= 1;
-  } else {
-    track_index = music_list.length - 1;
+// Change song
+prevBtn.addEventListener("click", prevSong);
+nextBtn.addEventListener("click", nextSong);
+
+// Time/song update
+audio.addEventListener("timeupdate", updateProgress);
+
+// Click on progress bar
+progressContainer.addEventListener("click", setProgress);
+
+// Song ends
+audio.addEventListener("ended", nextSong);
+
+// Time of song
+audio.addEventListener("timeupdate", DurTime);
+
+// Toggle class active
+const navbarNav = document.querySelector(".navbar-nav");
+// menu
+document.querySelector("#Menu").onclick = () => {
+  navbarNav.classList.toggle("active");
+};
+
+const menu = document.querySelector("#Menu");
+document.addEventListener("click", function (e) {
+  if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
   }
-  loadTrack(track_index);
-  playTrack();
-}
-
-function seekTo() {
-  let seekTo = curr_track.duration * (seek_slider.value / 100);
-  curr_track.currentTime = seekTo;
-}
-
-function setVolume() {
-  curr_track.volume = volume_slider.value / 100;
-}
-
-function setUpdate() {
-  let seekPosition = 0;
-  if (!isNaN(curr_track.duration)) {
-    seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-    seek_slider.value = seekPosition;
-
-    let currentMinutes = Math.floor(curr_track.currentTime / 60);
-    let currentSeconds = Math.floor(
-      curr_track.currentTime - currentMinutes * 60
-    );
-
-    let durationMinutes = Math.floor(curr_track.duration / 60);
-    let durationSeconds = Math.floor(
-      curr_track.duration - durationMinutes * 60
-    );
-
-    if (currentSeconds < 10) {
-      currentSeconds = "0" + currentSeconds;
-    }
-    if (durationSeconds < 10) {
-      durationSeconds = "0" + durationSeconds;
-    }
-    if (currentMinutes < 10) {
-      currentMinutes = "0" + currentMinutes;
-    }
-    if (durationMinutes < 10) {
-      durationMinutes = "0" + durationMinutes;
-    }
-
-    curr_time.textContent = currentMinutes + ":" + currentSeconds;
-    total_duration.textContent = durationMinutes + ":" + durationSeconds;
-  }
-}
+});

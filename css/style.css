@@ -18,6 +18,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
   background-color: var(--bg);
   color: #f1f1f1;
 }
@@ -55,7 +56,7 @@ body {
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--primary);
+  color: #000;
 }
 
 .navbar .navbar-nav a::after {
@@ -210,51 +211,6 @@ body {
   line-height: 1.6;
 }
 
-.tren .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.5rem;
-  margin-top: 4rem;
-}
-
-.tren .tren-card {
-  text-align: center;
-  border: 1px solid #1b1b1b;
-  padding: 2rem;
-}
-
-.tren .tren-icon {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.tren .tren-icon a {
-  width: 4rem;
-  height: 4rem;
-  color: #1b1b1b;
-  margin: 0.3rem;
-  display: flex;
-}
-
-.tren .tren-icon a:hover {
-  color: #f1b77a;
-}
-
-.tren .tren-img {
-  padding: 1rem 0;
-}
-
-.tren .tren-img img {
-  height: 10rem;
-}
-
-.tren .trent-name h3,
-.tren .trent-name h4 {
-  font-size: 1.5 rem;
-  color: #1b1b1b;
-}
-
 footer {
   background-color: var(--primary);
   text-align: center;
@@ -273,7 +229,7 @@ footer .social a {
 
 footer .social a:hover,
 footer .links a:hover {
-  color: var(--bg);
+  color: #000;
 }
 
 footer .links {
