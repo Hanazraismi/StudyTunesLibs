@@ -2,7 +2,7 @@ let allMusic = [
   {
     name: "Wave to Earth - Seasons",
     artist: "Seasons",
-    img: "music",
+    img: "about",
     src: "music1",
   },
   {
