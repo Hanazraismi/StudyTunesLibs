@@ -13,7 +13,7 @@ document.addEventListener("click", function (e) {
 });
 
 const wrapper = document.querySelector("wrapper"),
-musicimg = wrapper.querySelector(".img img"),
+musicImg = wrapper.querySelector(".img img"),
 musicName = wrapper.querySelector(".song .name"),
 musicArtist = wrapper.querySelector(".song .artist"),
 
@@ -27,5 +27,5 @@ window.addEventListener("load", ()=>{
 
 function loadMusic(indexNumb){
     musicName.innerText = allMusic[indexNumb - 1].name;
-    musicArtist.innerText = allMusic[indexNumb - 1].name;
+    musicArtist.innerText = allMusic[indexNumb - 1].artist;
 }

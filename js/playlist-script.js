@@ -3,7 +3,7 @@ let allMusic = [
     name: "Wave to Earth - Seasons",
     artist: "Seasons",
     img: "music",
-    src: "",
+    src: "music1",
   },
   {
     name: "Harry Styles - From the Dining Table",
