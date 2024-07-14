@@ -127,7 +127,7 @@ body {
 
 .hero .Tunes h1 {
   font-size: 5em;
-  color: #f1f1f1;
+  color: #1b1b1b;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
 }
@@ -157,19 +157,22 @@ body {
 }
 
 .about,
-.trend {
+.trend,
+.tren {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
-.trend h2 {
+.trend h2,
+.tren h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
 .about h2 span,
-.trend h2 span {
+.trend h2 span,
+.tren h2 span {
   color: #510896;
 }
 
@@ -207,7 +210,48 @@ body {
   line-height: 1.6;
 }
 
-footer {
+.tren .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.tren .tren-card {
+  text-align: center;
+  border: 1px solid #1b1b1b;
+  padding: 2rem;
+}
+
+.tren .tren-icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tren .tren-icon a {
+  width: 4rem;
+  height: 4rem;
+  color: #1b1b1b;
+  margin: 0.3rem;
+  display: flex;
+}
+
+.tren .tren-icon a:hover {
+  color: #f1b77a;
+}
+
+.tren .tren-img {
+  padding: 1rem 0;
+}
+
+.tren .tren-img img {
+  height: 10rem;
+  object-fit: cover;
+  object-fit: center;
+}
+
+.tren .tren footer {
   background-color: var(--primary);
   text-align: center;
   padding: 1rem 0 3rem;
@@ -219,7 +263,7 @@ footer .social {
 }
 
 footer .social a {
-  color: #f1f1f1;
+  color: #1b1b1b;
   margin: 1rem;
 }
 

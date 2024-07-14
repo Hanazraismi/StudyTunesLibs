@@ -2,46 +2,121 @@
 <html lang="en">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music Player</title>
+
+  <!-- Jika `index.html` berada dalam folder `html` -->
   <link rel="stylesheet" href="../css/player.css" />
+
+  <title>StudyTunes Library</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
     rel="stylesheet"
   />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+
   <head></head>
 
   <body>
     <nav class="navbar">
-        <a href="#" class="navbar-logo">StudyTunes<span> Library</span></a>
-  
-        <div class="navbar-nav">
-          <a href="../index.html" , id="Home"><i class="bx bxs-home"></i>Home</a>
-          <a href="#study" , id="Study"><i class="bx bxl-audible"></i>Study</a>
-          <a href="player.html" , id="Player"
-            ><i class="bx bx-microphone"></i>Player</a
-          >
-          <a href="../html/tunes.html" id="Tunes"
-            ><i class="bx bxs-music">Tunes</i></a
-          >
-        </div>
+      <a href="#" class="navbar-logo">StudyTunes<span> Library</span></a>
 
-        
-  
+      <div class="navbar-nav">
+        <a href="../index.html" , id="Home"><i class="bx bxs-home"></i>Home</a>
+        <a href="#study" , id="Study"><i class="bx bxl-audible"></i>Study</a>
+        <a href="../html/player.html" , id="Player"
+          ><i class="bx bx-microphone"></i>Player</a
+        >
+        <a href="../html/tunes.html" id="Tunes"
+          ><i class="bx bxs-music">Tunes</i></a
+        >
+      </div>
+
+      <div class="search">
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Type here to search" />
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="Menu"><i class="bx bx-menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- home section end -->
+
+    <!-- tune section -->
+
     <div class="wrapper">
       <div class="top-bar">
-        <i class="material">expand_more</i>
+        <i class="material-symbols-outlined">expand_more</i>
         <span>Now Playing</span>
-        <i class="material">more_horiz</i>
+        <i class="material-symbols-outlined">more_horiz</i>
       </div>
-      <div class="img-area">
-        <img src="" alt="" />
+
+      <div class="img">
+        <img src="#" alt="" />
       </div>
-      <div class="song-detail">
-        <p class="name"></p>
-        <p class="artist"></p>
+
+      <div class="song">
+        <p class="name">mixcat</p>
+        <p class="artist">goo</p>
+      </div>
+
+      <div class="progress">
+        <div class="progres-bar">
+          <span></span>
+        </div>
+        <div class="timer">
+          <span class="current">0:20</span>
+          <span class="current">3:40</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <i class="material-symbols-outlined">repeat </i>
+        <i class="material-symbols-outlined"> skip_previous </i>
+        <div class="play-paus">
+          <i class="material-symbols-outlined">play_arrow</i>
+        </div>
+        <i class="material-symbols-outlined"> skip_previous </i>
+        <i class="material-symbols-outlined"> skip_next</i>
+        <i class="material-symbols-outlined"> queue_music </i>
       </div>
     </div>
+
+    <section>
+      <div class="container">
+        <div class="card">
+          <div class="header">
+            <span class="action"><i class=""></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social">
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#Tunes">Tunes</a>
+        <a href="#Study">Study</a>
+        <a href="#Podcast">Podcast</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Kelompok 1</a> | &copy; 2024.</p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
   </body>
 </html>
