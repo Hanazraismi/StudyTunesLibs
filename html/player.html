@@ -1,67 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Jika `index.html` berada dalam folder `html` -->
-  <link rel="stylesheet" href="../css/player.css" />
-
-  <title>StudyTunes Library</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <head></head>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../css/player.css" />
+  </head>
   <body>
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">StudyTunes<span> Library</span></a>
-
-      <div class="navbar-nav">
-        <a href="../index.html" , id="Home"><i class="bx bxs-home"></i>Home</a>
-        <a href="#study" , id="Study"><i class="bx bxl-audible"></i>Study</a>
-        <a href="../html/player.html" , id="Player"
-          ><i class="bx bx-microphone"></i>Player</a
-        >
-        <a href="../html/tunes.html" id="Tunes"
-          ><i class="bx bxs-music">Tunes</i></a
-        >
-      </div>
-
-      <div class="search">
-        <i class="bx bx-search"></i>
-        <input type="text" placeholder="Type here to search" />
-      </div>
-
-      <div class="navbar-extra">
-        <a href="#menu" id="Menu"><i class="bx bx-menu"></i></a>
-      </div>
-    </nav>
-    <!-- Navbar end -->
-
-    <!-- home section end -->
-
-    <!-- tune section -->
-
     <div class="player">
       <div class="wrapper">
         <div class="details">
-          <div class="now-playing">PLAYING x OF Y</div>
+          <div class="now-playing">PLAYING x OF y</div>
+          <div class="track-art"></div>
           <div class="track-name">Track Name</div>
           <div class="track-artist">Track Artist</div>
         </div>
@@ -69,10 +27,9 @@
           <div class="current-time">00:00</div>
           <input
             type="range"
-            win="1"
+            min="1"
             max="100"
-            v
-            alue="0"
+            value="0"
             class="seek_slider"
             onchange="seekTo()"
           />
@@ -80,19 +37,19 @@
         </div>
         <div class="slider_container">
           <i class="fa fa-volume-down"></i>
-          <input 
-          type="range"
-          min="1"
-          max="100"
-          value="99"
-          class="volume_slider"
-          onchange="setVolume()"
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="99"
+            class="volume_slider"
+            onchange="setVolume()"
           />
           <i class="fa fa-volume-up"></i>
         </div>
         <div class="buttons">
-          <div class="radom-track" onclick="randomTrack()">
-            <i class="fa fa-random fa-2x" title="random"></i>
+          <div class="random-track" onclick="randomTrack()">
+            <i class="fas fa-random fa-2x" title="random"></i>
           </div>
           <div class="prev-track" onclick="prevTrack()">
             <i class="fa fa-step-backward fa-2x"></i>
@@ -105,8 +62,9 @@
           </div>
           <div class="repeat-track" onclick="repeatTrack()">
             <i class="fa fa-repeat fa-2x" title="repeat"></i>
+          </div>
         </div>
-        <div class="wave">
+        <div id="wave">
           <span class="stroke"></span>
           <span class="stroke"></span>
           <span class="stroke"></span>
@@ -117,34 +75,6 @@
         </div>
       </div>
     </div>
-
-    <section>
-      <div class="container">
-        <div class="card">
-          <div class="header">
-            <span class="action"><i class=""></i></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="social">
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-      </div>
-
-      <div class="links">
-        <a href="#">Home</a>
-        <a href="#Tunes">Tunes</a>
-        <a href="#Study">Study</a>
-        <a href="#Podcast">Podcast</a>
-      </div>
-
-      <div class="credit">
-        <p>Created by <a href="">Kelompok 1</a> | &copy; 2024.</p>
-      </div>
-    </footer>
-    <script src="../js/playlist-script.js"></script>
+    <script src="../js/player.js"></script>
   </body>
 </html>
