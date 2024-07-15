@@ -28,6 +28,11 @@ const songs = [
   "HIVI! - Remaja (Official Lyric Video)",
   "Lord Huron - The Night We Met (Official Lyric Video)",
   "On Bended Knee",
+  "Phoebe Bridgers - Scott Street (Official Video)",
+  "Raisa - Tak Berharap Lagi (Official Lyric Video)",
+  "Unutulacak Dunler",
+  "Yura Yunita ft. Glenn Fredly - Cinta dan Rahasia (Official Lyric Video)",
+  "",
 ];
 
 // Keep track of song
