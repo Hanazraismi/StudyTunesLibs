@@ -217,6 +217,45 @@ body {
   transition: width 0.1s linear;
 }
 
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 0.5rem 0;
+}
+
+footer .social a {
+  color: #1b1b1b;
+  margin: 1rem;
+}
+
+footer .social a:hover,
+footer .links a:hover {
+  color: #000;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #f1f1f1;
+  padding: 0.77rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -237,7 +276,7 @@ body {
     top: 100%;
     right: -100%;
     background-color: #1f1b1b;
-    width: 38rem;
+    width: 13rem;
     height: 100vh;
   }
 
