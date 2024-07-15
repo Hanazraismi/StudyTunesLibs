@@ -100,7 +100,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/back.jpg");
+  background-image: url("../assets/Cover\ Study\ Tunes\ Libs.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -116,8 +116,8 @@ body {
   bottom: 0;
   background: linear-gradient(
     0deg,
-    rgba(1, 1, 3, 1) 8%,
-    rgba(255, 255, 255, 0) 40%
+    rgba(245, 210, 16, 0.925) 8%,
+    rgba(255, 230, 204, 1) 40%;
   );
 }
 
