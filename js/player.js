@@ -12,7 +12,23 @@ const currTime = document.querySelector("#currTime");
 const durTime = document.querySelector("#durTime");
 
 // Song titles
-const songs = ["hey", "summer", "ukulele"];
+const songs = [
+  "hey",
+  "summer",
+  "ukulele",
+  "[온스테이지2.0] wave to earth - seasons (1)",
+  "Billie Eilish - BIRDS OF A FEATHER",
+  "Boyuk Umidler",
+  "Bruno Mars - When I Was Your Man (Official Music Video) (1)",
+  "Cinnamon Girl",
+  "Daun Jatuh - Resah Jadi Luka (Official Audio)",
+  "Djo - End Of Beginning (Official Audio)",
+  "Harry Styles - From the Dining Table (Audio)",
+  "Hindia - Besok Mungkin Kita Sampai (Official Lyric & Commentary Video)",
+  "HIVI! - Remaja (Official Lyric Video)",
+  "Lord Huron - The Night We Met (Official Lyric Video)",
+  "On Bended Knee",
+];
 
 // Keep track of song
 let songIndex = 2;
