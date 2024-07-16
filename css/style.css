@@ -19,7 +19,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  background-color: var(--bg);
+  background-color: #f1f1f1;
   color: #000;
 }
 
@@ -93,7 +93,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/Cover\ Study\ Tunes\ Libs.jpg");
+  background-image: url("../assets/images/Cover\ Study\ Tunes\ Libs.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -111,7 +111,7 @@ body {
   background: linear-gradient(
     0deg,
     rgba(245, 210, 16, 0.925) 8%,
-    rgba(255, 230, 204, 1) 100%;
+    rgba(241, 241, 241, 1) 30%;
   );
 }
 
