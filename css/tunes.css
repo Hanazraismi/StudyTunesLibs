@@ -1,6 +1,6 @@
 :root {
-  --primary: #000;
-  --bg: #f1b77a;
+  --primary: #f1b77a;
+  --bg: #ffe6cc;
 }
 
 * {
@@ -13,14 +13,14 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
   background-color: var(--bg);
-  color: #f1f1f1;
+  color: #000;
 }
 
 .navbar {
@@ -56,7 +56,7 @@ body {
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--primary);
+  color: #000;
 }
 
 .navbar .navbar-nav a::after {
@@ -96,71 +96,213 @@ body {
 }
 
 /* section */
-
-.studytunes {
-  padding: 40px;
-  margin-top: 5rem;
-}
-
-.studytunes h1 {
-  text-align: center;
-  font-size: 5rem;
-}
-
-.studytunes h1 span {
-  color: #1b1b1b;
-}
-
-.box h2 {
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 3rem;
-  font-size: 2.6rem;
-}
-
-.music {
+.hero {
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  flex-flow: column;
+  background-image: url("../assets/Cover\ Study\ Tunes\ Libs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
 }
 
-.music .box {
-  height: 16rem;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  border-radius: 1rem;
-  box-shadow: 0.5rem 1rem #1b1b1b;
-  overflow: hidden;
-  margin: 2rem;
-}
-
-.music .box .image {
-  height: 100%;
-  width: 25%;
-}
-
-.music .box .image img {
-  height: 100%;
-  width: 100%;
+/* .vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  max-width: 100%;
   object-fit: cover;
-}
+} */
 
-.music .box .music {
-  width: 75%;
-}
-
-.music .box .music audio {
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
   width: 100%;
-  outline: none;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(245, 210, 16, 0.925) 8%,
+    rgba(255, 230, 204, 1) 100%;
+  );
 }
 
-.music .box .music audio::-webkit-media-controls-eclosure {
-  background: none;
+.hero .Tunes {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .Tunes h1 {
+  font-size: 5em;
+  color: #1b1b1b;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .Tunes h1 span {
+  color: #510896;
+}
+
+.hero .Tunes p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.2;
+  font-weight: 100;
+  color: #1f1b1b;
+  /* text-shadow: 1px 1px 3px rgba(3, 3, 255, 0.5); */
+  /* mix-blend-mode: difference; */
+}
+
+.hero .Tunes .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  color: #510896;
+  background-color: var(--primary);
+  border-radius: 0.4rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.pos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  gap: 10px 20px;
+}
+
+.pos .card {
+  width: 13.9rem;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #000;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: transform 0.3s ease;
+  justify-content: center;
+}
+
+.pos .card .card-image {
+  height: 209px;
+  margin: 0 auto 10px;
+}
+
+.pos .card .card-image img {
+  width: 100px;
+  height: 200px;
+}
+
+.about,
+.trend,
+.playlist {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.trend h2,
+.playlist h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.trend h2 span,
+.tren h2 span {
+  color: #510896;
+}
+
+.about .row,
+.trend .music {
+  display: flex;
+}
+
+.about .row .about-img,
+.trend .music .music-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img,
+.trend .music .music-img img {
+  width: 100%;
+}
+
+.about .row .isiabout,
+.trend .music .isitrend {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .isiabout h3 .trend .music .isitrend h3 {
+  font: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .isiabout p,
+.trend .music .isitrend p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0em;
+}
+.audio {
+  width: 250px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1em;
+  background-color: #272727;
+  color: white;
+  box-shadow: 1px 1px 20px 1px black;
+  flex: 1 1 250px;
+  margin: 1em;
+  border-radius: 5px;
+}
+.audio img {
+  width: 200px;
+  height: 200px;
+  margin: 0.5em;
+}
+.audio h2 {
+  font-weight: 500;
+  font-size: medium;
+  margin: 0.5em;
+}
+.audio p {
+  font-size: small;
+  font-weight: 300;
+  text-align: center;
+  margin: 0.5em;
 }
 
 footer {
-  background-color: var(--primary);
+  background-color: #272727;
   text-align: center;
   padding: 1rem 0 3rem;
   margin-top: 3rem;
@@ -171,13 +313,13 @@ footer .social {
 }
 
 footer .social a {
-  color: #f1f1f1;
+  color: #1b1b1b;
   margin: 1rem;
 }
 
 footer .social a:hover,
 footer .links a:hover {
-  color: var(--bg);
+  color: #000;
 }
 
 footer .links {
@@ -215,12 +357,22 @@ footer .credit a {
     display: inline-block;
   }
 
+  .hero {
+    background-size: 100% 100%;
+  }
+
+  .vid .video video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #1f1b1b;
-    width: 38rem;
+    width: 13rem;
     height: 100vh;
   }
 
@@ -244,20 +396,32 @@ footer .credit a {
     transform: scaleX(0.2);
   }
 
-  .music .box {
-    height: 27rem;
-    width: 90%;
-    flex-flow: column;
+  .about .row,
+  .trend .music {
+    flex-wrap: wrap;
   }
 
-  .music .box .image {
-    height: 80%;
-    width: 100%;
+  .about .row .about-img img,
+  .trend .music .music-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-fit: center;
   }
 
-  .music .box .music {
-    height: 20%;
-    width: 100%;
+  .about .row .isiabout,
+  .trend .music .isitrend {
+    padding: 0;
+  }
+
+  .about .row .isiabout h3,
+  .trend .music .isitrend h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .isiabout p,
+  .trend .music .isitrend p {
+    font-size: 1.6rem;
   }
 }
 
