@@ -196,10 +196,19 @@ body {
 
 .about h2,
 .trend h2,
-.playlist h2 {
+.playlist .playlist-logo {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist .playlist-logo img {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .about h2 span,
