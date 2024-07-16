@@ -119,11 +119,12 @@ body {
   max-width: 60rem;
 }
 
-.hero .Tunes h1 {
-  font-size: 5em;
+.hero .Tunes h2 {
+  font-size: 3em;
   color: #1b1b1b;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
+  margin-top: 25rem;
 }
 
 .hero .Tunes h1 span {
