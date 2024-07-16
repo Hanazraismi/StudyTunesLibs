@@ -19,7 +19,7 @@ const songs = [
   "Billie Eilish - Birds of a Feather",
   "Lana Del Rey - Cinnamon Girl",
   "Lord Huron - The Night We Met",
-  "Scot Street - Phoebe Bridgers",
+  "Phoebe Bridgers - Scot Street",
   "Boyz II Men - On Bended Knee",
   "Bruno Mars - When I Was Your Man",
   "Sam Kim - Love Me Like That",
