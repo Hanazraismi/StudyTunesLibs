@@ -43,11 +43,8 @@ body {
   z-index: 9999;
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f1f1f1;
-  font-style: italic;
+.navbar .navbar-logo img {
+  height: 50px;
 }
 
 .navbar .navbar-logo span {
@@ -95,6 +92,16 @@ body {
   border: none;
   outline: none;
   color: #1b1b1b;
+}
+
+.logo {
+  justify-content: center;
+  align-items: center;
+}
+
+.logo .playlistlogo {
+  height: 50px;
+  width: 20%;
 }
 
 #Menu {
