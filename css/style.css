@@ -25,9 +25,9 @@ body {
 
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 20%;
-  overflow: hidden;
+  padding: 1rem 7%;
   background-color: rgba(82, 79, 87, 0.849);
   border-bottom: 1px solid #1b1b1b;
   position: fixed;
