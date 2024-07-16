@@ -200,7 +200,7 @@ body {
 .playlist h2,
 .contact h2 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -268,10 +268,6 @@ body {
   cursor: pointer;
 }
 
-.playlist audio {
-  max-width: 200px;
-}
-
 .about .row,
 .trend .music {
   display: flex;
@@ -313,9 +309,15 @@ body {
   flex-wrap: wrap;
   margin: 2em 0em;
 }
+
+.playlist audio {
+  max-width: 200px;
+  position: absolute;
+  margin-top: 375px;
+}
 .audio {
   width: 250px;
-  height: 375px;
+  height: 425px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -341,7 +343,7 @@ body {
 }
 .audio p {
   font-size: small;
-  font-weight: 200;
+  font-weight: 100;
   text-align: justify;
   margin: 0.3em;
 }
