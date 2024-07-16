@@ -468,6 +468,11 @@ footer .credit a {
   .trend .music .isitrend p {
     font-size: 1.6rem;
   }
+
+  .audio audio {
+    margin-top: 37rem;
+    position: absolute;
+  }
 }
 
 @media (max-width: 450px) {
