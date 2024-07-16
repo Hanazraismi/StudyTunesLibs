@@ -25,9 +25,9 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 7%;
+  height: 20%;
+  overflow: hidden;
   background-color: rgba(82, 79, 87, 0.849);
   border-bottom: 1px solid #1b1b1b;
   position: fixed;
@@ -37,15 +37,8 @@ body {
   z-index: 9999;
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f1f1f1;
-  font-style: italic;
-}
-
 .navbar .navbar-logo img {
-  height: 50%;
+  height: 100px;
 }
 
 .navbar .navbar-nav a {
@@ -361,12 +354,9 @@ footer .credit a {
     background-size: 100% 100%;
   }
 
-  .vid .video video {
-    width: auto;
-    height: auto;
-    max-width: 100%;
+  .navbar .navbar-logo img {
+    max-height: 40px;
   }
-
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
