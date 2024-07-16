@@ -20,7 +20,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   background-color: var(--bg);
-  color: #f1f1f1;
+  color: #000;
 }
 
 .navbar {
@@ -209,13 +209,13 @@ body {
 
 .about,
 .trend,
-.tren {
+.playlist {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .trend h2,
-.tren h2 {
+.playlist h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
