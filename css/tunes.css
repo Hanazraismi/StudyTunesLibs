@@ -271,7 +271,7 @@ body {
 }
 .audio {
   width: 250px;
-  height: 375px;
+  height: 425px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -303,7 +303,8 @@ body {
 }
 
 .audio audio {
-  margin-top: 1.5rem;
+  margin-top: 30rem;
+  position: absolute;
 }
 
 .playlist audio {
