@@ -158,7 +158,8 @@ body {
 }
 
 .logo .playlist-logo img {
-  margin-top: 10rem;
+  margin-top: 12rem;
+  margin-bottom: 0;
   height: auto;
   width: auto;
   max-height: 80px;
@@ -304,6 +305,10 @@ body {
 
 .audio audio {
   margin-top: 1.5rem;
+}
+
+.playlist audio {
+  max-width: 200px;
 }
 
 footer {

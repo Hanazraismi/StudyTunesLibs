@@ -268,6 +268,10 @@ body {
   cursor: pointer;
 }
 
+.playlist audio {
+  max-width: 200px;
+}
+
 .about .row,
 .trend .music {
   display: flex;
@@ -374,6 +378,7 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
+  color: #f1f1f1;
 }
 
 footer .credit a {
