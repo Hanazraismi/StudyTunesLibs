@@ -104,8 +104,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-size: 100% 100%;
   position: relative;
 }
+
+/* .vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  max-width: 100%;
+  object-fit: cover;
+} */
 
 .hero::after {
   content: "";
@@ -247,6 +261,45 @@ body {
   line-height: 1.6;
 }
 
+.main {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0em;
+}
+.audio {
+  width: 250px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1em;
+  background-color: #272727;
+  color: white;
+  box-shadow: 1px 1px 20px 1px black;
+  flex: 1 1 250px;
+  margin: 1em;
+  border-radius: 5px;
+}
+.audio img {
+  width: 200px;
+  height: 200px;
+  margin: 0.5em;
+}
+.audio h2 {
+  font-weight: 500;
+  font-size: medium;
+  margin: 0.5em;
+}
+.audio p {
+  font-size: small;
+  font-weight: 300;
+  text-align: center;
+  margin: 0.5em;
+}
+
 footer {
   background-color: var(--primary);
   text-align: center;
@@ -301,6 +354,16 @@ footer .credit a {
 
   #Menu {
     display: inline-block;
+  }
+
+  .hero {
+    background-size: 100% 100%;
+  }
+
+  .vid .video video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
   }
 
   .navbar .navbar-nav {
