@@ -93,7 +93,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/images/Cover\ Study\ Tunes\ Libs.png");
+  background-image: url("../assets/Cover\ Study\ Tunes\ Libs.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -280,7 +280,8 @@ body {
 
 .about .row .about-img img,
 .trend .music .music-img img {
-  width: 100%;
+  width: 92%;
+  height: 100%;
 }
 
 .about .row .isiabout,
