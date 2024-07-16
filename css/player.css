@@ -105,9 +105,11 @@ body {
   align-items: center;
 }
 
-.logo .playlistlogo {
-  height: 50px;
-  width: 20%;
+.logo .playlist-logo img {
+  height: auto;
+  width: auto;
+  max-width: 350px;
+  margin-bottom: 8rem;
 }
 
 #Menu {
