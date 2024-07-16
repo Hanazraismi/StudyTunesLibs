@@ -302,7 +302,7 @@ body {
 }
 
 footer {
-  background-color: var(--primary);
+  background-color: #272727;
   text-align: center;
   padding: 1rem 0 3rem;
   margin-top: 3rem;
