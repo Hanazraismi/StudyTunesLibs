@@ -45,7 +45,7 @@ body {
 }
 
 .navbar .navbar-logo img {
-  height: 50px;
+  height: auto;
 }
 
 .navbar .navbar-logo span {
