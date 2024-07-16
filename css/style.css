@@ -331,18 +331,18 @@ body {
 .audio img {
   width: 200px;
   height: 200px;
-  margin: 0.5em;
+  margin: 0.3em;
 }
 .audio h2 {
   font-weight: 500;
   font-size: medium;
-  margin: 0.5em;
+  margin: 0.3em;
 }
 .audio p {
   font-size: small;
-  font-weight: 300;
-  text-align: center;
-  margin: 0.5em;
+  font-weight: 200;
+  text-align: justify;
+  margin: 0.3em;
 }
 
 footer {
