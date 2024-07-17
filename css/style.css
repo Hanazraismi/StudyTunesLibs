@@ -332,6 +332,11 @@ body {
   margin: 1em;
   border-radius: 5px;
 }
+
+.audio audio {
+  position: absolute;
+  margin-top: 22.5rem;
+}
 .audio img {
   width: 200px;
   height: 200px;
@@ -394,6 +399,11 @@ footer .credit a {
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
+  }
+
+  .audio audio {
+    margin-top: 29rem;
+    position: absolute;
   }
 }
 
@@ -471,7 +481,7 @@ footer .credit a {
   }
 
   .audio audio {
-    margin-top: 37rem;
+    margin-top: 39.8rem;
     position: absolute;
   }
 }
