@@ -324,7 +324,7 @@ footer .social {
 }
 
 footer .social a {
-  color: #1b1b1b;
+  color: #f1f1f1;
   margin: 1rem;
 }
 
@@ -344,10 +344,11 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
+  color: #f1f1f1;
 }
 
 footer .credit a {
-  color: var(--bg);
+  color: #f1f1f1;
   font-weight: 700;
 }
 
