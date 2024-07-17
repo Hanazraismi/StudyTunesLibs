@@ -446,7 +446,7 @@ footer .credit a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0.1em;
+    padding: 0.1rem;
     background-color: #272727;
     color: white;
     box-shadow: 1px 1px 20px 1px black;
@@ -457,22 +457,22 @@ footer .credit a {
   .audio img {
     width: 200px;
     height: 200px;
-    margin: 0.5em;
+    margin: 0.2rem;
   }
   .audio h2 {
     font-weight: 500;
     font-size: medium;
-    margin: 0.5em;
+    margin: 0.2rem;
   }
   .audio p {
     font-size: small;
     font-weight: 300;
     text-align: center;
-    margin: 0.5em;
+    margin: 0.2rem;
   }
 
   .audio audio {
-    margin-top: 35rem;
+    margin-top: 36rem;
     position: absolute;
   }
 
