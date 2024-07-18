@@ -11,3 +11,25 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+const audioElement = document.getElementById("audioElement");
+const playPauseButton = document.getElementById("playPauseButton");
+const audioStatus = document.getElementById("audioStatus");
+const startTimeButton = document.getElementById("startTimeButton");
+
+playPauseButton.addEventListener("click", () => {
+  if (audioElement.paused) {
+    audioElement.play();
+    playPauseButton.textContent = "Pause";
+    audioStatus.textContent = "Playing";
+  } else {
+    audioElement.pause();
+    playPauseButton.textContent = "Play";
+    audioStatus.textContent = "Paused";
+  }
+});
+
+audioElement.addEventListener("ended", () => {
+  playPauseButton.textContent = "Play";
+  audioStatus.textContent = "Ended";
+});

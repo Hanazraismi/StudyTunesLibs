@@ -316,6 +316,33 @@ body {
   position: absolute;
   margin-top: 375px;
 }
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.control-button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+}
+
+.audio-button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 .audio {
   width: 250px;
   height: 425px;
